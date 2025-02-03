@@ -153,12 +153,10 @@ local teamsName = {
 local random = math.random
 
 AddEventHandler("OnMapLoad", function(event)
-    for i = 1, #teams do -- ! blu why? random i think is enough??
-        local random_1 = random(1, #teams)
-        server:Execute("mp_teamlogo_1 " .. teams[random_1])
-        server:Execute("mp_teamname_1 " .. teamsName[random_1])
-        local random_2 = random(1, #teams)
-        server:Execute("mp_teamlogo_2 " .. teams[random_2])
-        server:Execute("mp_teamname_2 " .. teamsName[random_2])
-    end
+    local random_1 = random(1, #teams)
+    server:Execute("mp_teamlogo_1 " .. teams[random_1])
+    server:Execute("mp_teamname_1 " .. teamsName[random_1])
+    local random_2 = random(1, #teams)
+    server:Execute("mp_teamlogo_2 " .. teams[random_2])
+    server:Execute("mp_teamname_2 " .. teamsName[random_2])
 end)
