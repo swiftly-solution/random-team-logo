@@ -154,9 +154,13 @@ local random = math.random
 
 AddEventHandler("OnMapLoad", function(event)
     local random_1 = random(1, #teams)
-    server:Execute("mp_teamlogo_1 " .. teams[random_1])
-    server:Execute("mp_teamname_1 " .. teamsName[random_1])
+    local team_1 = teams[random_1]
+    local teamName_1 = teamsName[team_1]
+    server:Execute("mp_teamlogo_1 " .. team_1)
+    server:Execute("mp_teamname_1 " .. teamName_1)
     local random_2 = random(1, #teams)
-    server:Execute("mp_teamlogo_2 " .. teams[random_2])
-    server:Execute("mp_teamname_2 " .. teamsName[random_2])
+    local team_2 = teams[random_2]
+    local teamName_2 = teamsName[team_2]
+    server:Execute("mp_teamlogo_2 " .. team_2)
+    server:Execute("mp_teamname_2 " .. teamName_2)
 end)
